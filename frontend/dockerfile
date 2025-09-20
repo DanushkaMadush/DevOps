@@ -1,5 +1,5 @@
 # Use official Node.js image as base for building React app
-FROM node:latest-alpine AS build
+FROM node:18-alpine AS build
 
 # Set working directory
 WORKDIR /app
