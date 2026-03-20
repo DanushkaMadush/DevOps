@@ -1,8 +1,8 @@
-# DevOps CI/CD Demo (GitHub Actions + Docker + AWS EC2)
+# DevOps CI/CD (GitHub Actions + Docker + AWS EC2)
 
 A sample application demonstrating a complete **CI/CD pipeline** using **GitHub Actions**, **Docker**, **Docker Compose**, and an **AWS EC2** instance.
 
-This repo is intended to showcase practical DevOps skills: automated deployments on PRs/pushes to `main`, container builds, and remote orchestration.
+This repo is intended to showcase practical DevOps skills, automated deployments on PRs/pushes to `main`, container builds, and remote orchestration.
 
 ---
 
@@ -35,7 +35,7 @@ Configured in `docker-compose.yml`:
 - **Frontend**: `80:80` (served by Nginx)
 - **Backend**: `5000:5000` (Node/Express)
 
-> HTTP only (demo project).
+> HTTP only.
 
 ---
 
@@ -103,8 +103,6 @@ The workflow expects these repository secrets:
 - `EC2_USER` – SSH user (e.g., `ec2-user`)
 - `EC2_SSH_KEY` – private key for SSH authentication
 
-*(Optional improvement)*
-- `APP_DIR` – directory where the repo is cloned on the EC2 instance
 
 ---
 
@@ -119,7 +117,7 @@ On your EC2 instance you should have:
 Security Group inbound rules typically needed:
 - `22/tcp` (SSH)
 - `80/tcp` (HTTP)
-- (optional) `5000/tcp` if you want to access the backend directly from the internet
+- `5000/tcp` if you want to access the backend directly from the internet
 
 ---
 
